@@ -1,3 +1,5 @@
+import ui.home
+
 fun main(args: Array<String>) {
-    println("josh")
+    home()
 }
