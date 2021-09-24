@@ -82,7 +82,8 @@ fun demandeDinfo() {
     val etudiantEnregistree = "${etudiant.CodeEtu} ${etudiant.NomEtu} ${etudiant.PostnomEtu} ${etudiant.ageEtu} ${etudiant.AdresseEtu} ${etudiant.Tel} ${etudiant.numTuteur}"
     val tuteurEnregistree = "${tuteur.numTuteur} ${tuteur.nomTuteur} ${tuteur.profession} ${tuteur.telTuteur}"
 
-
+    etuFileWrite(etudiantEnregistree)
+    tutFileWrite(tuteurEnregistree)
 }
 
 fun codeEtudiantCreation(etudiant: Etudiant):String {
