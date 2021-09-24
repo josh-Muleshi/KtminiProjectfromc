@@ -1,5 +1,8 @@
 package ui
 
+import model.Etudiant
+import model.Tuteur
+
 fun accueil_enregistrement() {
     println("\n                               Enregistrement                          ")
     println("===============================================================================\n")
@@ -40,7 +43,53 @@ fun enregistrement(){
 
     for (i in 1..nbrEnregistre)
     {
-        //demandeDinfo()
+        demandeDinfo()
     }
     demande()
 }
+
+fun demandeDinfo() {
+
+    val etudiant = Etudiant()
+    val tuteur = Tuteur()
+
+    print("\t\t * Nom > ")
+    etudiant.NomEtu = readLine().toString()
+    print("\t\t * Postnom > ")
+    etudiant.PostnomEtu = readLine().toString()
+    print("\t\t * Age > ")
+    etudiant.ageEtu = readLine()!!.toInt()
+    print("\t\t * Adresse > ")
+    etudiant.AdresseEtu = readLine().toString()
+    print("\t\t * Tel > ")
+    etudiant.Tel = readLine().toString()
+
+    print("\n\t\t Tuteur ");
+    print("\n\t\t--------\n");
+    print("\t\t * Numero du Tuteur > ");
+    tuteur.numTuteur = readLine()!!.toInt()
+    print("\t\t * Nom du Tuteur > ");
+    tuteur.nomTuteur = readLine().toString()
+    print("\t\t * Profession du Tuteur > ");
+    tuteur.profession = readLine().toString()
+    print("\t\t * Tel du Tuteur > ")
+    tuteur.telTuteur = readLine().toString()
+    print("\n");
+
+    etudiant.numTuteur = tuteur.numTuteur
+    println(codeEtudiantCreation(etudiant))
+
+    val etudiantEnregistree = "${etudiant.CodeEtu} ${etudiant.NomEtu} ${etudiant.PostnomEtu} ${etudiant.ageEtu} ${etudiant.AdresseEtu} ${etudiant.Tel} ${etudiant.numTuteur}"
+    val tuteurEnregistree = "${tuteur.numTuteur} ${tuteur.nomTuteur} ${tuteur.profession} ${tuteur.telTuteur}"
+
+
+}
+
+fun codeEtudiantCreation(etudiant: Etudiant):String {
+    val twoFisrt = etudiant.NomEtu.take(2)
+    val twoLast = etudiant.PostnomEtu.takeLast(2)
+    etudiant.CodeEtu = twoFisrt + twoLast + etudiant.ageEtu
+    return etudiant.CodeEtu
+}
+
+
