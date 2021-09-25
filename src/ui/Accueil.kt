@@ -29,6 +29,17 @@ fun item_choix() {
     when(choix){
         1 -> accueil_enregistrement()
         2 -> accueil_affichage()
-        else -> println("quitter")
+        else -> quitter()
+    }
+}
+fun quitter(){
+
+    println("=> Voulez-vous vraiment quitter ? [n/y] > ");
+    val choix = readLine().toString()
+
+    when(choix)
+    {
+        "n" -> home()
+        else -> return
     }
 }
