@@ -22,17 +22,17 @@ fun tutFileWrite(chaine:String){
         println(ex.message)
     }
 }
-fun lire_fichier(choix:Int) {
+fun lireFichier(choix:Int) {
     try {
         var lireFile: FileReader? = null
         var nomfichier: String? = null
 
         if (choix == 1) {
-            lireFile = FileReader("etudiant_data.txt");
-            nomfichier = "Etudiant";
+            lireFile = FileReader("etudiant_data.txt")
+            nomfichier = "Etudiant"
         } else if (choix == 2) {
-            lireFile = FileReader("tuteur_data.txt");
-            nomfichier = "Tuteur";
+            lireFile = FileReader("tuteur_data.txt")
+            nomfichier = "Tuteur"
         }
 
         show(lireFile, nomfichier)

@@ -3,7 +3,7 @@ package ui
 import model.Etudiant
 import model.Tuteur
 
-fun accueil_enregistrement() {
+fun accueilEnregistrement() {
     println("\n                               Enregistrement                          ")
     println("===============================================================================\n")
 
@@ -64,17 +64,17 @@ fun demandeDinfo() {
     print("\t\t * Tel > ")
     etudiant.Tel = readLine().toString()
 
-    print("\n\t\t Tuteur ");
-    print("\n\t\t--------\n");
-    print("\t\t * Numero du Tuteur > ");
+    print("\n\t\t Tuteur ")
+    print("\n\t\t--------\n")
+    print("\t\t * Numero du Tuteur > ")
     tuteur.numTuteur = readLine()!!.toInt()
-    print("\t\t * Nom du Tuteur > ");
+    print("\t\t * Nom du Tuteur > ")
     tuteur.nomTuteur = readLine().toString()
-    print("\t\t * Profession du Tuteur > ");
+    print("\t\t * Profession du Tuteur > ")
     tuteur.profession = readLine().toString()
     print("\t\t * Tel du Tuteur > ")
     tuteur.telTuteur = readLine().toString()
-    print("\n");
+    print("\n")
 
     etudiant.numTuteur = tuteur.numTuteur
     println(codeEtudiantCreation(etudiant))

@@ -12,32 +12,30 @@ fun home(){
     println("\t 2. Afficher les donnees")
     println("\t 0. Quitter")
 
-    item_choix()
+    itemChoix()
 }
 
-fun item_choix() {
+fun itemChoix() {
 
     print("\nTapez le numero ici > ")
     var choix = readLine()!!.toInt()
 
     while (choix < 0 || choix > 2)
     {
-        print("\nErreur ! le numero doit-etre entre 1 et 3 compris > ");
+        print("\nErreur ! le numero doit-etre entre 1 et 3 compris > ")
         choix = readLine()!!.toInt()
     }
 
     when(choix){
-        1 -> accueil_enregistrement()
-        2 -> accueil_affichage()
+        1 -> accueilEnregistrement()
+        2 -> accueilAffichage()
         else -> quitter()
     }
 }
 fun quitter(){
 
-    println("=> Voulez-vous vraiment quitter ? [n/y] > ");
-    val choix = readLine().toString()
-
-    when(choix)
+    println("=> Voulez-vous vraiment quitter ? [n/y] > ")
+    when(readLine().toString())
     {
         "n" -> home()
         else -> return
