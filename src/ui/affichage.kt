@@ -2,7 +2,7 @@ package ui
 
 fun accueil_affichage(){
 
-    println("\n\n                           Affichage de donnees                           ");
+    println("\n                           Affichage de donnees                           ");
     println("===============================================================================\n");
 
     println("\t\t 1. Afficher les etudiants");
@@ -21,17 +21,12 @@ fun accueil_affichage(){
     when (choix)
     {
         1 -> lire_fichier(choix)
-
         2 -> lire_fichier(choix)
-
         else -> home()
     }
 
     retour();
-
 }
-
-/*----------------------------------------------------------------------------------------*/
 
 fun retour(){
 
