@@ -28,7 +28,7 @@ fun item_choix() {
 
     when(choix){
         1 -> accueil_enregistrement()
-        2 -> println("afficher")
+        2 -> accueil_affichage()
         else -> println("quitter")
     }
 }

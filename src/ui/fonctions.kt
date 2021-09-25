@@ -29,11 +29,11 @@ fun lire_fichier(choix:Int)
 
     if (choix == 1)
     {
-        lireFile = FileReader ("../db/etudiant_data.txt");
+        lireFile = FileReader ("etudiant_data.txt");
         nomfichier = "Etudiant";
     }else if (choix == 2)
     {
-        lireFile = FileReader ("../../db/tuteur_data.txt");
+        lireFile = FileReader ("tuteur_data.txt");
         nomfichier = "Tuteur";
     }
 
@@ -43,7 +43,7 @@ fun lire_fichier(choix:Int)
         println("\t\t**********************************************\n")
         do {
             c = lireFile?.read()
-            println(c?.toChar())
+            print(c?.toChar())
         }while (c!=-1)
     }catch (ex:Exception){
         println(ex.message)
