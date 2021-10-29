@@ -32,6 +32,7 @@ fun itemChoix() {
         else -> quitter()
     }
 }
+
 fun quitter(){
 
     println("=> Voulez-vous vraiment quitter ? [n/y] > ")

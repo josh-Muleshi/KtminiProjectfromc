@@ -22,6 +22,7 @@ fun tutFileWrite(chaine:String){
         println(ex.message)
     }
 }
+
 fun lireFichier(choix:Int) {
     try {
         var lireFile: FileReader? = null
